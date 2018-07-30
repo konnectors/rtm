@@ -9,6 +9,7 @@
   "editor": "Ludovic Poujol",
   "vendor_link": "http://www.rtm.fr",
   "categories": ["transport"],
+  "frequency": "monthly",
   "fields": {
     "cardNumber": {
       "type": "text",
