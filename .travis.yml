@@ -6,6 +6,7 @@ env:
   - GH_USER_EMAIL="travis@example.org"
   - GH_USER_NAME="cozy-bot"
   - DEPLOY_REPOSITORY="git@github.com:konnectors/rtm.git"
+  - secure: bAp0skL94Hh4Of6i0qLm7YpA9eDL5eX36kd4ik1zqRlTCmISjS94+XjFE7girsqSDHW5Ekh+cW5R3YBBhGs4IN0eIFXAIImwV7ZlSpNCtW0OhS1rQh7828vElXjIkDOfHY3TQUhurXpX1qIf3IQ0I42h2K5uM0fNvBEv5gNug4ebNV012qt7HmYjxrEA6875kQTN7EP3ZzILs1r4ocuEFU+ujh5eKVMjo0xFUAUjRnFF38dzSzF0wHngSobTqXv4kLHirnRYRnA/hrSUOAPGz68bQeX53RWs4WYLmO1jLF8uaNcE7e86g1wuvyHoiD/hJyXJJfEo3exNZWUrJDfZHQpKm+fNnTQolA7GMm58tzBnt8DF2oHM+kCqzckjEM8W+NaT7wMIoSsxAvgZ58bsWOOmvTIUeU2miYsaJL7pZSTsXBLxaxK18P/L/KNXyEKP/OfjM9efTHoum4qDU2YIPlJnfXL+5oSSGIwoV8P1aQKDfzhiWiratNIIXOxRtxRyBf7cC4iQBBZFR0VRCJU1ObP9uKyysFvVC3EvIGMc3mR7UZ8aUDqi3YBMMRGKhfnOxy0/IV6vsExQQJoZQqHxviH5Lg6n37X+MCuWnBTCpz4rrse9ebjWCp85RppdtUPfOEZDp3kEET4tm5oBYtgx2sC1nJ1tkuvK7yrzzj4lFBc=
 cache:
   yarn: true
   directories:
@@ -29,6 +30,8 @@ deploy:
   on:
     tags: true
 before_install:
+- openssl aes-256-cbc -K $encrypted_bed5212054a4_key -iv $encrypted_bed5212054a4_iv
+  -in github_deploy_key.enc -out /tmp/github_deploy_key -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/github_deploy_key
 - ssh-add /tmp/github_deploy_key
