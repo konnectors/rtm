@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "name": "RTM",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.png",
+  "slug": "rtm",
+  "source": "git://github.com/konnectors/rtm.git",
+  "editor": "Ludovic Poujol",
+  "vendor_link": "http://www.rtm.fr",
+  "categories": ["transport"],
+  "frequency": "monthly",
+  "fields": {
+    "transpassCardNumber": {
+      "type": "text",
+      "label": "transpass_card_number",
+      "min": 10,
+      "max": 10
+    },
+    "birthDate": {
+      "type": "text",
+      "label": "birth_date"
+    },
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
+      }
+    }
+  },
+  "data_types": [
+    "bill"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "bank operations": {
+      "type": "io.cozy.bank.operations"
+    },
+    "bills": {
+      "type": "io.cozy.bills"
+    },
+    "files": {
+      "type": "io.cozy.files"
+    },
+    "accounts": {
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    }
+  },
+  "developer": {
+    "name": "Ludovic Poujol"
+  },
+  "langs": ["fr", "en"],
+  "locales": {
+    "fr": {
+      "short_description": "Connecteur RTM",
+      "long_description": "Ce connecteur récupère les factures/attestations d'un abonnement à la RTM (Régie des Transports Métropolitains)",
+      "transpass_card_number": "Numéro de carte Transpass",
+      "birth_date": "Date de naissance (format JJ/MM/AAAA)",
+      "permissions": {
+        "bank operations": {
+          "description": "Utilisé pour relier les factures/attestations à des operations bancaires"
+        },
+        "bills": {
+          "description": "Utilisé pour sauver les données des factures"
+        },
+        "files": {
+          "description": "Utilisé pour sauvegarder les factures"
+        },
+        "accounts": {
+          "description": "Utilisé pour obtenir les données du compte"
+        }
+      }
+    },
+    "en": {
+      "short_description": "Connector RTM",
+      "long_description": "This connector fetches the bills/certificates of subscription at the RTM transport service",
+      "transpass_card_number": "Transpass Card Number",
+      "birth_date": "Birth date (format DD/MM/YYYY)",
+      "permissions": {
+        "bank operations": {
+          "description": "Required to link bank operations to bills"
+        },
+        "bills": {
+          "description": "Required to save the bills data"
+        },
+        "files": {
+          "description": "Required to save the bills"
+        },
+        "accounts": {
+          "description": "Required to get the account's data"
+        }
+      }
+    }
+  },
+  "manifest_version": "2"
+}
