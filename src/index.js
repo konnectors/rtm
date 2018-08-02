@@ -1,3 +1,9 @@
+// Force sentry DSN into environment variables
+// In the future, will be set by the stack
+process.env.SENTRY_DSN =
+  process.env.SENTRY_DSN ||
+  'https://7b6562ec14244978829dfda71634b275:9b5bbe1f11984b4eb4f3d8ddb0f56b71@sentry.cozycloud.cc/86'
+
 const {
   BaseKonnector,
   requestFactory,
