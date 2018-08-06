@@ -11,15 +11,13 @@
   "categories": ["transport"],
   "frequency": "monthly",
   "fields": {
-    "transpassCardNumber": {
+    "cardNumber": {
       "type": "text",
-      "label": "transpass_card_number",
       "min": 10,
       "max": 10
     },
-    "birthDate": {
-      "type": "text",
-      "label": "birth_date"
+    "dob": {
+      "type": "date",
     },
     "advancedFields": {
       "folderPath": {
@@ -55,8 +53,6 @@
     "fr": {
       "short_description": "Connecteur RTM",
       "long_description": "Ce connecteur récupère les factures/attestations d'un abonnement à la RTM (Régie des Transports Métropolitains)",
-      "transpass_card_number": "Numéro de carte Transpass",
-      "birth_date": "Date de naissance (format JJ/MM/AAAA)",
       "permissions": {
         "bank operations": {
           "description": "Utilisé pour relier les factures/attestations à des operations bancaires"
@@ -75,8 +71,6 @@
     "en": {
       "short_description": "Connector RTM",
       "long_description": "This connector fetches the bills/certificates of subscription at the RTM transport service",
-      "transpass_card_number": "Transpass Card Number",
-      "birth_date": "Birth date (format DD/MM/YYYY)",
       "permissions": {
         "bank operations": {
           "description": "Required to link bank operations to bills"
