@@ -37,7 +37,7 @@ module.exports = new BaseKonnector(start)
 // the account information come from ./konnector-dev-config.json file
 async function start(fields) {
   log('info', 'Authenticating ...')
-  await authenticate(fields.transpassCardNumber, fields.birthDate)
+  await authenticate(fields.cardNumber, fields.dob)
   log('info', 'Successfully logged in')
 
   // The BaseKonnector instance expects a Promise as return of the function
