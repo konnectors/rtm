@@ -17,7 +17,7 @@
       "max": 10
     },
     "dob": {
-      "type": "date",
+      "type": "date"
     },
     "advancedFields": {
       "folderPath": {
