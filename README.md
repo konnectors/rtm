@@ -29,13 +29,13 @@ Create a `konnector-dev-config.json` file at the root with your test credentials
 ```javascript
 {
   "COZY_URL": "http://cozy.tools:8080",
-  "fields": {"transpassCardNumber":"0000000000", "birthDate":"24/01/1969"}
+  "fields": {"cardNumber":"0000000000", "dob":"24/01/1969"}
 }
 ```
 
 Where :
-* transpassCardNumber is your Transpass card number
-* birthDate is... well, the birth date of the card bearer
+* cardNumber is your Transpass card number
+* dob is... well, the birth date of the card bearer (DD/MM/YYY format)
 
 Then :
 
