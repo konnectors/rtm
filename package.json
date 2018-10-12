@@ -1,6 +1,6 @@
 {
   "name": "cozy-konnector-rtm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "repository": {
     "type": "git",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "cozy-konnector-libs": "4.11.2",
-    "moment": "^2.22.2"
+    "moment": "2.22.2"
   },
   "devDependencies": {
     "copy-webpack-plugin": "4.5.2",
