@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.1.0",
   "name": "RTM",
   "type": "konnector",
   "language": "node",
@@ -8,9 +8,7 @@
   "source": "git://github.com/konnectors/rtm.git",
   "editor": "Ludovic Poujol",
   "vendor_link": "http://www.rtm.fr",
-  "categories": [
-    "transport"
-  ],
+  "categories": ["transport"],
   "frequency": "monthly",
   "fields": {
     "cardNumber": {
@@ -44,18 +42,13 @@
     },
     "accounts": {
       "type": "io.cozy.accounts",
-      "verbs": [
-        "GET"
-      ]
+      "verbs": ["GET"]
     }
   },
   "developer": {
     "name": "Ludovic Poujol"
   },
-  "langs": [
-    "fr",
-    "en"
-  ],
+  "langs": ["fr", "en"],
   "locales": {
     "fr": {
       "short_description": "Connecteur RTM",
