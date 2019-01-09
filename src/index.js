@@ -58,7 +58,11 @@ async function start(fields) {
   })
 }
 
-function authenticate(cardNumber, birthDate) {
+function authenticate(cardNumber, cozyBirthDate) {
+  // Transform the dob field from cozy (YYYY-MM-DD) to the required format (DD/MM/YYYY)
+  let [birthYear, birthMonth, birthDay] = cozyBirthDate.split('-')
+  let birthDate = `${birthDay}/${birthMonth}/${birthYear}`
+
   return signin({
     url: `${baseUrl}/guide-voyageur/acheter/attestation-abonnement`,
     formSelector: 'form#cartetranspasse1',
